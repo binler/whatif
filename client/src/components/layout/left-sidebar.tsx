@@ -18,6 +18,9 @@ export default function RightSideBar() {
                 <Link href="/setting">
                     Setting
                 </Link>
+                <Link href="/login">
+                    Login
+                </Link>
             </Flex>
         </View>
     )

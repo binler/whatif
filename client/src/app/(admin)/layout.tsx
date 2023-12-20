@@ -3,8 +3,8 @@ import { View, Grid } from '@adobe/react-spectrum';
 
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import LeftSideBar from '@/components/layout/leftsidebar';
-import RightSideBar from '@/components/layout/rightsidebar';
+import LeftSideBar from '@/components/layout/left-sidebar';
+import RightSideBar from '@/components/layout/right-sidebar';
 
 export default function AdminLayout({
     children
