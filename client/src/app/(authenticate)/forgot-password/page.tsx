@@ -1,7 +1,11 @@
 "use client"
 
-import { Text } from "@adobe/react-spectrum";
+import { Form, TextField, Checkbox } from "@adobe/react-spectrum";
 
-export default function Login() {
-    return <Text>Forgot Password page</Text>
+export default function ForgotPassword() {
+    return <Form maxWidth="size-3600">
+        <TextField label="Email" />
+        <TextField label="Password" />
+        <Checkbox>Remember me</Checkbox>
+    </Form>
 }

@@ -1,11 +1,18 @@
 "use client"
 
-import { View } from "@adobe/react-spectrum";
+import { View, Flex } from "@adobe/react-spectrum";
 
 export default function LoginLayout({
     children
 }: {
     children: React.ReactNode
 }) {
-    return <View backgroundColor="magenta-600">{children}</View>
+    return <Flex height="100vh">
+        <View flex justifySelf="center" alignSelf="center">
+            {children}
+        </View>
+        <View flex backgroundColor="blue-400">
+            {children}
+        </View>
+    </Flex>
 }
