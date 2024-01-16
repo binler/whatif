@@ -18,6 +18,7 @@
     },
     "packageManager": "pnpm@7.15.0",
     "dependencies": {
+        "lucide-react": "^0.244.0",
         "million": "^2.6.4"
     }
 }
