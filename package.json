@@ -1,5 +1,5 @@
 {
-    "name": "turborepo-shadcn-ui",
+    "name": "what-if",
     "version": "0.1.1",
     "private": true,
     "scripts": {
@@ -7,12 +7,17 @@
         "dev": "turbo run dev",
         "lint": "turbo run lint",
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "ui:add": "pnpm --filter ui ui:add"
+        "ui:add": "pnpm --filter ui ui:add",
+        "prepare": "husky install || echo 1"
     },
     "devDependencies": {
+        "@commitlint/cli": "^18.6.0",
+        "@commitlint/config-conventional": "^18.6.0",
         "@turbo/gen": "^1.9.7",
         "eslint": "^7.32.0",
         "eslint-config-custom": "workspace:*",
+        "husky": "^9.0.6",
+        "lint-staged": "^15.2.0",
         "prettier": "^2.5.1",
         "turbo": "latest"
     },
@@ -20,5 +25,8 @@
     "dependencies": {
         "lucide-react": "^0.244.0",
         "million": "^2.6.4"
+    },
+    "lint-staged": {
+        "*.{ts,tsx,md}": "prettier --write"
     }
 }
