@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import { Text } from "@adobe/react-spectrum";
 
 export default function Setting() {
-    return <Text>Setting</Text>
+    return <Text>Setting</Text>;
 }

@@ -1,13 +1,9 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
-export function ClientProviders({ children }: {
-    children: React.ReactNode
-}) {
+export function ClientProviders({ children }: { children: React.ReactNode }) {
     let router = useRouter();
 
-    return (
-        {children}
-    );
+    return { children };
 }
