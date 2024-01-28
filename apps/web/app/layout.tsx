@@ -1,7 +1,6 @@
 import "@ui/styles/globals.css";
 
-import { Metadata } from "next";
-import type { Viewport } from "next";
+import { Metadata, Viewport } from "next";
 
 import { siteConfig } from "@/config/site";
 import { fontMono } from "@/lib/fonts";
@@ -24,7 +23,7 @@ export const metadata: Metadata = {
     ],
     authors: [
         {
-            name: "shadcn",
+            name: "binlerdev",
             url: "https://shadcn.com",
         },
     ],
@@ -80,10 +79,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     fontMono.className
                 )}
             >
-                <div vaul-drawer-wrapper="">
+                <div>
                     <div className="relative flex min-h-screen flex-col bg-background">
                         <SiteHeader />
-                        <main className="flex-1">{children}</main>
+                        <div className="flex-1 space-y-4 p-8 pt-6">
+                            {children}
+                        </div>
                     </div>
                 </div>
             </body>

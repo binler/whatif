@@ -1,43 +1,22 @@
-import Link from "next/link";
+import { NavItem } from "@ui/types/nav";
 
-import { cn } from "@/lib/utils";
+import { LinkItem } from "@/components/link-item";
 
-export function MainNav({
-    className,
-    ...props
-}: React.HTMLAttributes<HTMLElement>) {
+interface MainNavProps {
+    items?: NavItem[];
+}
+
+export function MainNav({ items }: MainNavProps) {
     return (
-        <nav
-            className={cn(
-                "flex items-center space-x-4 lg:space-x-6",
-                className
-            )}
-            {...props}
-        >
-            <Link
-                href="/examples/dashboard"
-                className="text-sm font-medium transition-colors hover:text-primary"
-            >
-                Overview
-            </Link>
-            <Link
-                href="/examples/dashboard"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
-                Customers
-            </Link>
-            <Link
-                href="/examples/dashboard"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
-                Products
-            </Link>
-            <Link
-                href="/examples/dashboard"
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-            >
-                Settings
-            </Link>
-        </nav>
+        <>
+            {items?.length ? (
+                <nav className="flex gap-6">
+                    {items?.map(
+                        (item, index) =>
+                            item.href && <LinkItem key={index} item={item} />
+                    )}
+                </nav>
+            ) : null}
+        </>
     );
 }
